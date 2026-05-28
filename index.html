@@ -1,135 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laços que Aquecem</title>
-  <link rel="icon" type="image/png" href="media/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecionando...</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#0f172a;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      flex-direction:column;
+    }
+
+    .box{
+      text-align:center;
+    }
+
+    .loader{
+      width:50px;
+      height:50px;
+      border:5px solid #334155;
+      border-top:5px solid #22c55e;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+      margin:20px auto;
+    }
+
+    @keyframes spin{
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <img src="media/logo.png" alt="Logo Laços que Aquecem" class="header-logo">
-      <h1>Laços que Aquecem</h1>
-      <p>Nem todo mundo tem o básico para viver com dignidade.</p>
-    </div>
-  </header>
 
-  <div class="divider"></div>
+<div class="box">
+  <h1>Estamos conectando você...</h1>
+  <div class="loader"></div>
+  <p>Aguarde alguns segundos</p>
+</div>
 
-  <section class="container intro" id="sobre">
-    <div class="text">
-      <h2 class="section-title">Sobre o Projeto</h2>
-      <p>
-        Laços que Aquecem é uma ação solidária que arrecada roupas, alimentos e itens de higiene para pessoas em
-        situação de rua. Mais do que doações, queremos criar laços de cuidado e acolhimento! Junte-se a nós e faça parte
-        dessa corrente do bem.
-      </p>
-      <a href="#cards" class="btn">Como Ajudar</a>
-    </div>
-  </section>
+<script>
 
-  <div class="divider"></div>
+const atendentes = [
 
-  <section class="container" id="cards">
-    <h2 class="section-title">Como Você Pode Ajudar</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Arrecadação de Roupas</h3>
-        <p>Coletamos agasalhos, cobertores e roupas em bom estado para manter todos aquecidos.</p>
-      </div>
-      <div class="card">
-        <h3>Distribuição de Alimentos</h3>
-        <p>Doamos kits de alimentação balanceada, garantindo refeições nutritivas aos necessitados.</p>
-      </div>
-      <div class="card">
-        <h3>Itens de Higiene</h3>
-        <p>Levamos kits de higiene pessoal como sabonete, escova e pasta de dentes, e itens de cuidados básicos.</p>
-      </div>
-      <div class="card">
-        <h3>Engajamento Comunitário</h3>
-        <p>Promovemos rodas de conversa e oficinas para fortalecer vínculos e escutar histórias.</p>
-      </div>
-      <div class="card">
-        <h3>Voluntariado</h3>
-        <p>Seja um voluntário! Sua ajuda é fundamental para o sucesso do projeto.</p>
-      </div>
-      <div class="card">
-        <h3>Doações Financeiras</h3>
-        <p>Contribuições financeiras ajudam a manter o projeto ativo e a atender mais pessoas.</p>
-      </div>
-    </div>
-  </section>
+  "https://wa.me/5588999991111?text=Olá%20vim%20pelo%20anúncio",
 
-  <div class="divider"></div>
+  "https://wa.me/5588999992222?text=Olá%20vim%20pelo%20anúncio",
 
-  <section class="container depoimentos" id="depoimentos">
-    <h2 class="section-title">Depoimentos</h2>
-    <p>
-      
-    </p>
-    <div class="autor">— </div>
-  </section>
+  "https://wa.me/5588999993333?text=Olá%20vim%20pelo%20anúncio"
 
-  <div class="divider"></div>
+];
 
-  <section class="container socials" id="galeria">
-    <h2 class="section-title">Galeria de Ações</h2>
-    <div class="gallery">
-      <img
-        src=""
-        alt="(Descrever imagem)">
-      <img src=""
-        alt="(Descrever imagem)">
-      <img
-        src=""
-        alt="(Descrever imagem)">
-    </div>
-  </section>
+const indiceAleatorio = Math.floor(Math.random() * atendentes.length);
 
-  <div class="divider"></div>
+setTimeout(() => {
+  window.location.href = atendentes[indiceAleatorio];
+}, 1500);
 
-  <section class="container doacoes-contato" id="doacoes-contato">
-    <div class="doacao">
-      <h2>Faça sua Doação</h2>
-      <p>Ajude-nos a aquecer mais corações! Sua contribuição faz toda a diferença para quem mais precisa.</p>
-      <a href="https://www.vakinha.com.br/vaquinha/lacos-que-aquecem" target="_blank" class="btn">Doar Agora</a>
-      <ul>
-        <li>Pix: <b>lacosqueaquecem@gmail.com</b></li>
-        <li>Banco: <b>Mercado Pago</b></li>
-      </ul>
-    </div>
-    <div class="contato">
-      <h2>Contato</h2>
-      <ul>
-        <li>
-          <b>Email:</b>
-          <a href="mailto:lacosqueaquecem@gmail.com">lacosqueaquecem@gmail.com</a>
-        </li>
-        <li>
-          <b>Instagram:</b>
-          <a href="https://www.instagram.com/lacosqueaquecem/" target="_blank">@lacosqueaquecem</a>
-        </li>
-        <li>
-          <b>WhatsApp:</b>
-          <a href="https://wa.me/5588997322442" target="_blank">(88) 99732-2442</a>
-        </li>
-        <li>
-          <b>Ponto de Coleta:📍</b>
-          <a href="https://maps.app.goo.gl/Zij6riuiEqk9F5kN8" target="_blank">Rua F. Conjunto Nova Vida Nº183</a>
-        </li>
-      </ul>
-      <p style="margin-top:1rem;">Entre em contato para dúvidas, parcerias ou para ser voluntário!</p>
-    </div>
-  </section>
+</script>
 
-  <footer>
-    <p>&copy; 2025 Laços que Aquecem. Todos os direitos reservados.</p>
-  </footer>
 </body>
-
 </html>
